@@ -1,4 +1,4 @@
-package com.excise.daemon;
+package com.excise._1_daemon;
 
 /**
  * 设置守护线程必须在start之前设置
