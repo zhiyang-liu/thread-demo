@@ -15,17 +15,17 @@ public class GoodSuspend {
         public void resumeMe() {
             suspendme = false;
             synchronized (this) {
-                notify();
+                this.notify();
             }
         }
 
         @Override
         public void run() {
             while (true) {
-                synchronized (this) { // 这里锁对象使用u也可以
+                synchronized (this) {
                     while (suspendme) {
                         try {
-                            wait();
+                            this.wait();
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }

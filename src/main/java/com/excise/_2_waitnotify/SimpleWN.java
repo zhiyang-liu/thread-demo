@@ -12,7 +12,7 @@ package com.excise._2_waitnotify;
  */
 public class SimpleWN {
 
-    // wait和notify方法为Onject类提供
+    // wait和notify方法为Object类提供
     final static Object object = new Object();
 
     public static class T1 extends Thread {
